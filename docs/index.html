@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Alejandro Daniel Insfrán Cañete</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body onload="AOS.init()">
+        <!-- Barra encima de la sección -->
+        <div class="top-bar">
+            <div class="top-bar-options">
+                <a href="cv.pdf" download class="cv-button">
+                    <span>CV</span> <i class="fas fa-download"></i>
+                </a>
+                <button class="contact-button" onclick="toggleContactForm()">
+                    Contact Me <i class="fas fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    <!-- Section 1: Skills -->
+    <section id="skills" class="section" data-aos="fade-up">
+        <div class="square">
+            <h3>FULL-STACK DEVELOPER</h3>
+            <h1>Alejandro Insfran Cañete</h1>
+            <p>Hello, I am Alejandro Daniel Insfrán Cañete, a Full Stack developer.</p>
+            <p>Here are the technologies I work with:</p>
+            <div class="icons">
+                <div class="skill">
+                <i class="fab fa-html5"></i> HTML
+                <i class="fab fa-css3-alt"></i> CSS
+                <i class="fab fa-js"></i> JavaScript
+                <i class="fab fa-php"></i> PHP
+                <i class="fas fa-database"></i> SQL
+                <i class="fab fa-python"></i> Python
+                <i class="fas fa-code"></i> C
+            </div>
+        </div>
+        <div class="linkedin-box">
+            <a href="https://www.linkedin.com/in/alejandro-insfran-721518279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="linkedin-link">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Facultad -->
+    <section id="faculty" class="section" data-aos="fade-up">
+        <div class="faculty-square">
+            <h2>National University of Asunción (FP-UNA)</h2>
+            <h3>Computer Engineering Student</h3>
+            <p>I am pursuing a degree in Computer Engineering at the Faculty of Engineering of the National University of Asunción (FP-UNA), where I develop skills in programming, algorithms, and new technologies.</p>
+            <a href="https://www.pol.una.py/"><img src="Logo.jpg" alt="Logo Facultad" class="faculty-img"></a>
+        </div>
+    </section>
+
+
+    <!-- Section 3: Projects -->
+    <section id="projects" class="section" data-aos="fade-up">
+        <div class="square">
+            <h1>My Projects</h1>
+            <div class="projects-grid">
+                <div class="project">
+                    <a href="https://ale13211.github.io/sistemaR01/" target="_blank">
+                        <img src="imagen.png" alt="Project Image" class="project-image" />
+                    </a>
+                    <p>
+                        HTML was used to structure the interface, CSS for design and responsiveness, and JavaScript to implement the conversion logic between Guarani, Dollar, and Euro. The exchange rates were applied dynamically to display real-time results.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Work and Experience -->
+   <!-- Sección de Work -->
+<section id="work" class="section">
+    <div class="work-square">
+        <img src="zeta.png" alt="Logo de tu empresa" class="work-logo" />
+        <h2>My Workplace</h2>
+        <p>My Workplace
+            This is the company where I work, providing solutions.
+        </p>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <footer id="contact" class="section" data-aos="fade-up">
+        <div class="square">
+            <div class="contact-icon" onclick="toggleContactForm()">
+                <i class="fas fa-briefcase"></i> <span>Contact Me</span>
+            </div>
+            <div id="contact-form" class="contact-form hidden">
+                <form id="form" action="mailto:your-email@domain.com" method="POST" enctype="multipart/form-data">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
