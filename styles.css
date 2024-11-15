@@ -1,0 +1,339 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Para el texto del cuerpo */
+    background-color: #131415;
+    color: #f4f4f9;
+    scroll-behavior: smooth;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #3b82f6; /* Color original de la barra */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2a2c2e;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #1b1c1f;
+}
+
+.navbar i {
+    font-size: 1.5em;
+}
+
+/* Estilo para todas las secciones */
+.section {
+    padding: 30px 10px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1px;
+    background-color: transparent; /* Sin fondo para la sección */
+    border-radius: 15px;
+}
+
+/* Estilo para los cuadros en cada sección */
+.square, .faculty-square, .project, .work-square, .experience-square {
+    background: linear-gradient(145deg, #3b82f6, #1e3a8a); /* Mismo gradiente */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ajustar para que los cuadros tengan el mismo tamaño */
+    max-width: 700px; /* Ajustar el ancho máximo */
+    margin: 20px auto; /* Centrado y espacio entre cuadros */
+}
+
+/* Agregar efectos visuales en hover a los cuadros */
+.square:hover, .faculty-square:hover, .project:hover, .work-square:hover, .experience-square:hover {
+    transform: translateY(-10px); /* Efecto hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Sombra más grande en hover */
+}
+
+/* Sección 1: Habilidades */
+.iconos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.habilidad {
+    font-size: 1.5em;
+    margin: 20px;
+    text-align: center;
+    color: #3b82f6; /* Azul brillante */
+    transition: transform 0.3s ease;
+}
+
+.habilidad:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de las habilidades */
+}
+
+/* Sección 2: Facultad */
+.faculty-square {
+    padding: 40px;
+    width: 100%; /* Asegura que ocupe el mismo espacio que los demás cuadros */
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* Sección 3: Proyectos */
+/* Sección 3: Proyectos */
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    justify-content: center; /* Centra los proyectos */
+}
+
+.project {
+    background-color: inherit; /* Hereda fondo */
+    padding: 30px;
+    border-radius: 15px;
+    width: 45%; /* Ajusta el tamaño de los cuadros de proyectos */
+    text-align: center;
+    box-shadow: inherit; /* Hereda sombra */
+}
+
+.project img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina cualquier margen inferior */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+
+/* Sección 4: Trabajo y Experiencia */
+.work-square {
+    position: relative;
+    background: linear-gradient(145deg, #3b82f6, #1e3a8a);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.work-square h2 {
+    font-size: 1.6em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.work-square p {
+    font-size: 1.2em;
+    color: #f4f4f9;
+}
+
+/* Estilo de la imagen (logo) en la sección de trabajo */
+.work-logo {
+    max-width: 200px; /* Ajusta según el tamaño de tu logo */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Efecto hover para el cuadro de trabajo */
+.work-square:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de los iconos LinkedIn */
+.linkedin-link {
+    font-size: 1.5em;
+    color: #6a94bd; /* Azul LinkedIn */
+    display: block;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #004182; /* Azul oscuro LinkedIn */
+}
+
+/* Formulario de contacto */
+.contact-form {
+    display: none;
+    margin-top: 30px;
+}
+
+.contact-icon {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.contact-icon:hover {
+    color: #3b82f6;
+}
+
+#form input, #form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+/* Cuadro de facultad */
+.faculty-square {
+    padding: 40px;
+    width: 100%; /* Asegura que ocupe el mismo espacio que los demás cuadros */
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* Sección de contacto final */
+#contacto {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    background-color: #121212; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+    background-color: #1e3a8a;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #1e3a8a;
+}
+
+.navbar i {
+    font-size: 1.5em;
+}
+
+/* Estilo de la barra superior con las opciones */
+.top-bar-options {
+    display: flex;
+    gap: 30px;
+}
+
+/* Elimina el fondo del div de la barra superior */
+.top-bar {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none; /* Elimina la sombra también si no es necesaria */
+}
+
+/* Mantén el estilo de los botones */
+.cv-button, .contact-button {
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #3b82f6, #1e3a8a); /* Colores gradiente de los botones */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cv-button:hover, .contact-button:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas grandes (notebooks y desktops) */
+@media screen and (min-width: 1024px) {
+    .projects-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .project {
+        width: 30%;
+    }
+
+    .work-square {
+        width: 48%;
+        max-width: 800px;
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media screen and (max-width: 1024px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media screen and (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
