@@ -1,301 +1,135 @@
-/* Reset de estilos */
+/* Estilo base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
-/* Tipografía global */
 body {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Para el texto del cuerpo */
-    background-color: #131415;
-    color: #f4f4f9;
-    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    background-color: #2f3640; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
 }
 
-/* Encabezados y títulos */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif; /* Para títulos */
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculator {
+    background-color: #1e272e; /* Fondo oscuro de la calculadora */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    width: 400px; /* Agrandado */
+    text-align: center;
+}
+
+/* Título */
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f1c40f; /* Color dorado fuerte */
     font-weight: 700;
 }
 
-/* Subtítulos o textos destacados */
-h1, h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #3b82f6; /* Puedes ajustar el color según tu estilo */
+/* Input y botones */
+.input-group {
+    margin-bottom: 20px;
 }
 
-/* Párrafos y texto general */
-p, a, span, li {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    font-size: 1.1em;
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 5px;
+    border: 2px solid #27ae60; /* Verde intenso */
+    border-radius: 10px;
+    outline: none;
+    background-color: #34495e; /* Fondo oscuro del input */
+    color: #fff;
 }
 
-/* Barra de navegación */
-.navbar {
-    background-color: #3b82f6;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+input:focus {
+    border-color: #f1c40f; /* Color dorado para el borde al hacer foco */
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #2a2c2e;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: #1b1c1f;
-}
-
-.navbar i {
-    font-size: 1.5em;
-}
-
-/* Estilo para todas las secciones */
-/* Mantener la sección transparente */
-.section {
-    padding: 30px 10px;
-    text-align: center;
-    position: relative;
-    margin-bottom: 1px;
-    background-color: transparent; /* Sin fondo para la sección */
-    border-radius: 15px;
-}
-
-/* Estilo para los cuadros en cada sección */
-.square, .faculty-square, .project, .work-square, .experience-square {
-    background: linear-gradient(145deg, #3b82f6, #1e3a8a); /* Mismo gradiente */
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Ajustar para que los cuadros tengan el mismo tamaño */
-    max-width: 700px; /* Ajustar el ancho máximo */
-    margin: 20px auto; /* Centrado y espacio entre cuadros */
-}
-
-/* Agregar efectos visuales en hover a los cuadros */
-.square:hover, .faculty-square:hover, .project:hover, .work-square:hover, .experience-square:hover {
-    transform: translateY(-10px); /* Efecto hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Sombra más grande en hover */
-}
-
-/* Sección 1: Habilidades */
-.iconos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.habilidad {
-    font-size: 1.5em;
-    margin: 20px;
-    text-align: center;
-    color: #3b82f6; /* Azul brillante */
-    transition: transform 0.3s ease;
-}
-
-.habilidad:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño de las habilidades */
-}
-
-/* Sección 2: Facultad */
-.faculty-square {
-    padding: 40px;
-    width: 100%; /* Asegura que ocupe el mismo espacio que los demás cuadros */
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-/* Sección 3: Proyectos */
-.projects-grid {
+/* Botones para cambiar divisas */
+.currency-select {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-}
-
-.project {
-    background-color: inherit; /* Hereda fondo */
-    padding: 30px;
-    border-radius: 15px;
-    width: 30%; /* Cuadros de proyectos ocupan el 30% del ancho */
-    text-align: center;
-    box-shadow: inherit; /* Hereda sombra */
-}
-
-/* Sección 4: Trabajo y Experiencia */
-/* Estilo para la sección de trabajo */
-.work-square {
-    position: relative;
-    background: linear-gradient(145deg, #3b82f6, #1e3a8a);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 700px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.work-square h2 {
-    font-size: 1.6em;
-    color: #fff;
     margin-bottom: 20px;
 }
 
-.work-square p {
-    font-size: 1.2em;
-    color: #f4f4f9;
-}
-
-/* Estilo de la imagen (logo) en la sección de trabajo */
-.work-logo {
-    max-width: 200px; /* Ajusta según el tamaño de tu logo */
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-/* Efecto hover para el cuadro de trabajo */
-.work-square:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilo de los iconos LinkedIn */
-.linkedin-link {
-    font-size: 1.5em;
-    color: #6a94bd; /* Azul LinkedIn */
-    display: block;
-    margin-top: 20px;
-    transition: color 0.3s ease;
-}
-
-.linkedin-link:hover {
-    color: #004182; /* Azul oscuro LinkedIn */
-}
-
-/* Formulario de contacto */
-.contact-form {
-    display: none;
-    margin-top: 30px;
-}
-
-.contact-icon {
-    font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-
-.contact-icon:hover {
-    color: #3b82f6;
-}
-
-#form input, #form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-}
-
-/* Cuadro de facultad */
-.faculty-square {
-    padding: 40px;
-    width: 100%; /* Asegura que ocupe el mismo espacio que los demás cuadros */
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-/* Sección de contacto final */
-#contacto {
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-    background-color: #121212; /* Fondo oscuro */
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilo de la barra de navegación */
-.navbar {
-    background-color: #1e3a8a;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #3b82f6;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: #1e3a8a;
-}
-
-.navbar i {
-    font-size: 1.5em;
-}
-
-/* Estilo de la barra superior con las opciones */
-.top-bar-options {
-    display: flex;
-    gap: 30px;
-}
-
-/* Elimina el fondo del div de la barra superior */
-.top-bar {
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: none; /* Elimina la sombra también si no es necesaria */
-}
-
-/* Mantén el estilo de los botones */
-.cv-button, .contact-button {
-    padding: 10px 20px;
-    background: linear-gradient(145deg, #3b82f6, #1e3a8a); /* Colores gradiente de los botones */
+.currency-btn {
+    background-color: #27ae60; /* Verde brillante */
     color: white;
     border: none;
-    border-radius: 50px;
-    font-size: 1.1em;
+    padding: 20px;
+    font-size: 18px;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    width: 48%;
+    transition: background-color 0.3s ease;
 }
 
-.cv-button:hover, .contact-button:hover {
-    transform: scale(1.1);
+.currency-btn:hover {
+    background-color: #2ecc71; /* Verde más brillante al hacer hover */
+}
+
+/* Resultados de la conversión */
+.result {
+    margin-bottom: 30px;
+}
+
+#converted-amount {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f1c40f; /* Color dorado fuerte para mostrar el resultado */
+}
+
+/* Botón de reset */
+.reset-btn {
+    background-color: #e74c3c; /* Rojo brillante */
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b; /* Rojo más oscuro al hacer hover */
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+    .calculator {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .currency-btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    #converted-amount {
+        font-size: 30px;
+    }
+
+    .reset-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
 }
