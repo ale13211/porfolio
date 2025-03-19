@@ -1,0 +1,9 @@
+section {
+    padding: 10px;
+    margin: 10px auto; /* Centra las secciones horizontalmente */
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Bordes redondeados */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    display: inline-block; /* Ajusta el ancho al contenido */
+}
