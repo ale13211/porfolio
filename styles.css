@@ -111,7 +111,7 @@ footer a {
 .certificaciones img {
   width: 100%;        /* se adapta al contenedor */
   height: auto;       
-  max-width: 320px;   
+  max-width: 200px;   
   border-radius: 8px;
   object-fit: contain;
 }
@@ -121,4 +121,5 @@ footer a {
     max-width: 250px;
   }
 }
+
 
