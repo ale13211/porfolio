@@ -103,16 +103,30 @@ footer a {
 }
 .certificaciones {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
+  grid-template-columns: 1fr; /* por defecto 1 imagen por fila */
+  gap: 15px;
   padding: 10px;
+  justify-items: center;
 }
 
 .certificaciones img {
-  width: 100%;      /* se ajusta al ancho del contenedor */
-  height: auto;     /* mantiene proporción */
-  max-width: 400px; /* opcional: nunca más grande de 400px */
+  width: 100%;       /* ocupa el ancho del contenedor */
+  height: auto;      /* mantiene la proporción */
+  max-width: 350px;  /* nunca más grande que 350px */
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  object-fit: contain;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* En pantallas medianas (tablets) */
+@media (min-width: 600px) {
+  .certificaciones {
+    grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila */
+  }
+}
+
+/* En pantallas grandes (PC) */
+@media (min-width: 1024px) {
+  .certificaciones {
+    grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila */
+  }
 }
