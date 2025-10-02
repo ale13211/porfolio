@@ -102,31 +102,23 @@ footer a {
     color: #ff7a00;
 }
 .certificaciones {
-  display: grid;
-  grid-template-columns: 1fr; /* por defecto 1 imagen por fila */
-  gap: 15px;
-  padding: 10px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .certificaciones img {
-  width: 100%;       /* ocupa el ancho del contenedor */
-  height: auto;      /* mantiene la proporción */
-  max-width: 350px;  /* nunca más grande que 350px */
+  width: 100%;        /* se adapta al contenedor */
+  height: auto;       /* mantiene proporción */
+  max-width: 320px;   /* nunca más grande de 320px en móvil */
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  object-fit: contain;
 }
 
-/* En pantallas medianas (tablets) */
+/* Para pantallas más grandes */
 @media (min-width: 600px) {
-  .certificaciones {
-    grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila */
-  }
-}
-
-/* En pantallas grandes (PC) */
-@media (min-width: 1024px) {
-  .certificaciones {
-    grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila */
+  .certificaciones img {
+    max-width: 250px;
   }
 }
