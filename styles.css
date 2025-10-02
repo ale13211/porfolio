@@ -110,15 +110,15 @@ footer a {
 
 .certificaciones img {
   width: 100%;        /* se adapta al contenedor */
-  height: auto;       /* mantiene proporción */
-  max-width: 320px;   /* nunca más grande de 320px en móvil */
+  height: auto;       
+  max-width: 320px;   
   border-radius: 8px;
   object-fit: contain;
 }
 
-/* Para pantallas más grandes */
 @media (min-width: 600px) {
   .certificaciones img {
     max-width: 250px;
   }
 }
+
