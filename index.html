@@ -58,6 +58,41 @@
       header h2 { font-size: 1.2rem; }
       .project-card a { margin-top: 0.5rem; display: block; }
     }
+    .certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .certificate-card {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,106,0,0.4);
+  }
+  .certificate-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  .cv-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ff6a00;
+    color: #121212;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .cv-button:hover {
+    background: #ffa64d;
+  }
   </style>
 </head>
 <body>
@@ -102,7 +137,28 @@
       <div class="skill">Git & GitHub</div>
     </div>
   </section>
-
+<!-- CERTIFICATES & CV -->
+<section class="certificates container fade-in-delay">
+  <h2>Certificates & CV</h2>
+  <div class="certificates-grid">
+    <!-- Ejemplo de certificados -->
+    <div class="certificate-card">
+      <img src="certificado-react.png" alt="React Certificate">
+      <p>React - Front-End Development</p>
+    </div>
+    <div class="certificate-card">
+      <img src="certificado-figma.png" alt="Figma Certificate">
+      <p>UI/UX Design - Figma</p>
+    </div>
+    <div class="certificate-card">
+      <img src="certificado-sql.png" alt="SQL Certificate">
+      <p>SQL & Database Management</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:2rem;">
+    <a href="Alejandro_Insfran_CV.pdf" download class="cv-button">Download CV (PDF)</a>
+  </div>
+</section>
   <!-- PROJECTS -->
   <section class="projects-section container fade-in">
     <h2>Projects</h2>
