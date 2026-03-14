@@ -6,6 +6,28 @@
   <title>Alejandro Insfran | Front-End & UI/UX</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    .stack-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:1.5rem;
+max-width:800px;
+margin:auto;
+}
+
+.stack-item{
+background:#1e1e1e;
+padding:1rem;
+text-align:center;
+border-radius:10px;
+font-weight:600;
+transition:0.3s;
+}
+
+.stack-item:hover{
+background:#ff6a00;
+color:#121212;
+transform:scale(1.1);
+}
     /* RESET AND TYPOGRAPHY */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background: #121212; color: #f5f5f5; line-height: 1.6; scroll-behavior: smooth; }
@@ -116,7 +138,21 @@
       <div class="skill">Git & GitHub</div>
     </div>
   </section>
+<section class="tech-stack container fade-in">
+  <h2>Tech Stack</h2>
 
+  <div class="stack-grid">
+    <div class="stack-item">HTML5</div>
+    <div class="stack-item">CSS3</div>
+    <div class="stack-item">JavaScript</div>
+    <div class="stack-item">React</div>
+    <div class="stack-item">Figma</div>
+    <div class="stack-item">Git</div>
+    <div class="stack-item">GitHub</div>
+    <div class="stack-item">SQL</div>
+    <div class="stack-item">Python</div>
+  </div>
+</section>
   <!-- PROJECTS -->
   <section class="projects-section container fade-in">
     <h2>Projects</h2>
